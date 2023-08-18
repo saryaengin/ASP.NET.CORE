@@ -1,0 +1,41 @@
+﻿@model EntityLayer.Concrete.Portfolio
+@{
+    ViewData["Title"] = "AddPortfolio";
+    Layout = "~/Views/Shared/_NewAdminLayout.cshtml";
+}
+
+@using (Html.BeginForm("AddPortfolio", "Portfolio", FormMethod.Post))
+{
+	<div class="col-12 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<p class="card-description"> Yeni Portfolyo Ekleme Paneli </p>
+				<form class="forms-sample">
+					<div class="form-group">
+						<label>İsim</label>
+						<input type="text" class="form-control" name="Name">
+					</div>
+					@Html.ValidationMessageFor(x =>x.Name)
+					<div class="form-group">
+						<label>Görsel URL</label>
+						<input type="text" class="form-control" name="ImageUrl">
+					</div>
+					@Html.ValidationMessageFor(x =>x.ImageUrl)
+					<div class="form-group">
+						<label>Görsel URL 2</label>
+						<input type="text" class="form-control" name="ImageUrl2">
+					</div>
+					@Html.ValidationMessageFor(x =>x.ImageUrl2)
+					<div class="form-group">
+						<label>Proje URL</label>
+						<input type="text" class="form-control" name="ProjectUrl">
+					</div>
+					@Html.ValidationMessageFor(x =>x.ProjectUrl)
+					<button type="submit" class="btn btn-outline-light mr-2">Kaydet</button>
+					<button class="btn btn-outline-light">İptal</button>
+				</form>
+			</div>
+		</div>
+	</div>
+}
+

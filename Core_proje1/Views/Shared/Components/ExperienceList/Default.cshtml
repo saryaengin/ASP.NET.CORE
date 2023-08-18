@@ -1,0 +1,36 @@
+﻿@using EntityLayer.Concrete
+@model List<Experience>
+
+<div class="section px-3 px-lg-4 pt-5" id="experience">
+    <div class="container-narrow">
+	    <div class="text-center mb-5">
+		    <h2 class="marker marker-center">Deneyimlerim</h2>
+	    </div>
+	    <div class="text-center">
+		    <p class="mx-auto mb-3" style="max-width:800px">Merhaba.Henüz 1.sınıf öğrencisi olduğumdan ötürü bir iş deneyimim bulunmamakta.Şu an için burada eğitim eğitim ve staj bilgilerim mevcut olacak.İlerleyen vakitlerde elde edeceğim deneyimleri buraya yükleyeceğim :)</p>
+	    </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+	            <div class="col-md-6">
+		            <div class="card mb-3" data-aos="fade-right" data-aos-delay="200">
+			            <div class="card-header px-3 py-2">
+				            <div class="d-flex justify-content-between">
+					            <div>
+						            <a href="@item.Link" target="_blank">
+										<h3 class="h5 mb-1">@item.Title</h3>
+									</a>
+						            <div class="text-muted text-small">@item.Name<small>(@item.Date)</small></div>
+					            </div>
+					            <img src="@item.ImageUrl" width="60" height="60" alt="Eğitim"/> 
+				            </div>
+			            </div>
+			            <div class="card-body px-3 py-2">
+				            <p>@item.Description</p>
+			            </div>
+		            </div>
+	            </div>
+            }
+        </div>
+    </div>
+</div>
