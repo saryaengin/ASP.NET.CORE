@@ -14,7 +14,7 @@ namespace DataAccessLayer.Concrete
     { 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=SARYA-ENGIN\\SQLEXPRESS;database=CoreProjeDB;integrated security=true ");
+            optionsBuilder.UseSqlServer("//SQL server bağlantısı yazılacak");
         }
         public DbSet<About> Abouts { get; set; }
         public DbSet<Contact> Contacts { get; set; }
