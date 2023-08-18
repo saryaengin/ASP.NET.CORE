@@ -12,3 +12,5 @@ kadar birçok konuyu detaylı şekilde ele aldık. Ayrıca katmanlı mimari gibi
 ASP.NET Core 6.0 ile geliştirdim. Bu durum, kurs sürecinde karşılaştığım bazı zorluklarla başa
 çıkmamı gerektirdi. Ancak bu hatalar ve zorluklar, benim için çok daha fazla öğrenme ve deneyim kazanma fırsatı oldu.
 
+İncelemek isterseniz projeyi çektiğim bir videoyu da proje içerisine ekledim coreproje.mp4 olarak
+
